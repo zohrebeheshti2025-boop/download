@@ -67,7 +67,7 @@ jobs:
           ZIP_PASSWORD="${{ github.event.inputs.password }}"
 
           # REDUCED to 45MB for faster, more reliable pushes
-          SPLIT_THRESHOLD_MB=90
+          SPLIT_THRESHOLD_MB=1024
           SPLIT_THRESHOLD_BYTES=$(( SPLIT_THRESHOLD_MB * 1024 * 1024 ))
 
           REPO_OWNER="${{ github.repository_owner }}"
